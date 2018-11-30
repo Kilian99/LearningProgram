@@ -1,0 +1,15 @@
+integer_flag = False
+while ~integer_flag:
+    try:
+        x = int(input('How many hours did you work?\n'))
+        rate = int(input('How much do you get paid per hour?\n'))
+        integer_flag = True
+    except:
+        print('Please enter valid integer or float.')
+
+if x <= 40:
+    pay = x * rate
+    print('Congratulations! You made', pay)
+elif x > 40:
+    pay = (40 * rate) + (1.5 * rate) * (x - 40)
+    print('Congratulations! You made', pay)
